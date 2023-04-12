@@ -1,0 +1,33 @@
+@* <h1>Cadastro de Cursos</h1><br> *@
+<h1>@ViewData["titulo"]</h1>
+<h6>@ViewData["DataHora"]</h6>
+<h6>@ViewBag.DataHora</h6>
+
+@* 
+Qual a diferença entre:
+    ViewData - Dicionario
+    ViewBag - É dinâmico e ja entende o tipo (Dynamic)
+    TempData - Mantem o valor (sessão)
+
+*@ 
+
+@* <form class="form-control">
+Título Interno <input type="text"><br>
+Título Marketing <input type="text"><br>
+Descrição <br><textarea rows="4" cols="7"></textarea><br>
+</form> *@
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Título Interno</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Título Marketing</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+<button type="submit" class="btn btn-primary mb-3">Cadastrar</button>

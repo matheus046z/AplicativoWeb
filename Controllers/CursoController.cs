@@ -16,18 +16,11 @@ public IActionResult Index(){
     return View();
 }
 
+//Action
+public IActionResult Create (){
+    ViewData["titulo"] = "Cadastro de Cursos";
+    ViewBag.DataHora = DateTime.Now;
+    return View();
 }
 
-/* PESQUISAR SOBRE ENCAPSULAMENTO (O NOME É ESCONDIDO/ESCPASULADO. As classes se relacionam, )
-public void SetNome(string_nome){
-    nome=_nome;
 }
-
-public string GetNome(){
-    return nome;
-}
-no C# é a automatico as propriedades de get e set
-
-
-
-*/

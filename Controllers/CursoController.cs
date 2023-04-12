@@ -3,18 +3,6 @@ using Microsoft.AspNetCore.Mvc; // MIcrosoft
 namespace AplicativoWeb.Controllers; // Definindo
 
 public class CursoController:Controller{
-
-/*
-    Ações ou Actions
-    Objetivo: redirecionar para as páginas
-    View
-
-*/
-/*
-Interface = Interface Gráfica
-
-*/
-
 public IActionResult Index(){
 
     Curso c1 = new Curso();
@@ -24,10 +12,22 @@ public IActionResult Index(){
     c1.TituloMarketing = "Crie Aplicativos Incríveis";
 
     //get
-    ViewData["desc"] = c1.Descricao;
-    ViewData["titInt"] = c1.TituloInterno;
-    ViewData["titMark"] = c1.TituloMarketing;
+    ViewData["curso"] = c1;
     return View();
 }
 
 }
+
+/* PESQUISAR SOBRE ENCAPSULAMENTO (O NOME É ESCONDIDO/ESCPASULADO. As classes se relacionam, )
+public void SetNome(string_nome){
+    nome=_nome;
+}
+
+public string GetNome(){
+    return nome;
+}
+no C# é a automatico as propriedades de get e set
+
+
+
+*/

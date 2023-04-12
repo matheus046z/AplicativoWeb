@@ -1,58 +1,16 @@
-@* 
-@for (int i = 1; i <=5; i++){
+@{
+// fortemente tipada
+var curso = ViewData["curso"] as Curso; //converteu ViewData para Curso
 
-<div class="container">
-  <div class="row">
-    
-    <div class="col-sm">
-        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-            <div class="card-header">@ViewData["titInt"]</div>
-            <div class="card-body">
-                <h5 class="card-title">@ViewData["titMark"]</h5>
-                <p class="card-text">@ViewData["desc"]</p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-sm">
-      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-            <div class="card-header">@ViewData["titInt"]</div>
-            <div class="card-body">
-                <h5 class="card-title">@ViewData["titMark"]</h5>
-                <p class="card-text">@ViewData["desc"]</p>
-            </div>
-        </div>
-    </div>
-   
-   <div class="col-sm">
-      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-            <div class="card-header">@ViewData["titInt"]</div>
-            <div class="card-body">
-                <h5 class="card-title">@ViewData["titMark"]</h5>
-                <p class="card-text">@ViewData["desc"]</p>
-            </div>
-            </div>
-    </div>
 
-    <div class="col-sm">
-      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-            <div class="card-header">@ViewData["titInt"]</div>
-            <div class="card-body">
-                <h5 class="card-title">@ViewData["titMark"]</h5>
-                <p class="card-text">@ViewData["desc"]</p>
-            </div>
-            </div>
-    </div>
-  
-  </div>
-</div>
 
-} *@
+
+}
 
 <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-    <div class="card-header">@ViewData["titInt"]</div>
+    <div class="card-header">@curso?.TituloInterno</div>
     <div class="card-body">
-        <h5 class="card-title">@ViewData["titMark"]</h5>
-        <p class="card-text">@ViewData["desc"]</p>
+        <h5 class="card-title">@curso?.TituloMarketing  </h5>
+        <p class="card-text">@curso?.Descricao </p>
     </div>
 </div>
